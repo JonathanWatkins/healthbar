@@ -1,0 +1,39 @@
+.centered-container, .bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-container {
+   height: 30px;
+   width: 400px;
+}
+
+.bar-frame {
+    width:100%;
+    height:100%;
+  background: black;
+}
+
+
+.bar-background {
+    width:100%;
+    height:100%;
+    background: red;
+}
+
+.bar-health {
+    width:100%;
+    height:100%;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1s;
+}
+
+#health-text {
+    position:absolute;
+
+}
