@@ -11,7 +11,7 @@ function updateScreen() {
 }
 
 document.getElementById("maxhealth").addEventListener("change",function(){
-    let maxHealthChange = document.getElementById("maxhealth").value
+    let maxHealthChange = parseInt(document.getElementById("maxhealth").value)
     
     // console.log(maxHealthChange)
 
@@ -24,7 +24,7 @@ document.getElementById("maxhealth").addEventListener("change",function(){
 })
 
 document.getElementById("hit-button").addEventListener("click", function(){
-    let hitValue = document.getElementById("hit-value").value
+    let hitValue = parseInt(document.getElementById("hit-value").value)
     
 
     currentHealth = currentHealth > hitValue ? currentHealth - hitValue : 0
