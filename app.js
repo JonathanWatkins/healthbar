@@ -3,6 +3,7 @@ let maxHealth = 100
 let currentHealth = 50
 let interval
 let dotRunning = false
+let rageRunning = false
 
 document.getElementById("health-text").innerHTML = currentHealth + "/" + maxHealth
 document.getElementById("bar-health").style.width = currentHealth/maxHealth*100 + "%"
@@ -52,5 +53,21 @@ document.getElementById("dot-button").addEventListener("click", function(){
         clearInterval(interval)
         document.getElementById("dot-button").value = "Dot"
         dotRunning = false     
+    }  
+})
+
+document.getElementById("rage-button").addEventListener("click", function(){
+    if (rageRunning === false) {
+              
+       
+
+        document.getElementById("rage-button").value = "Stop Rage"
+        document.body.style.animation = "argh-my-eyes 0.2s infinite"
+        rageRunning = true
+    } else { // rage running === false
+        
+        document.getElementById("rage-button").value = "Rage"
+        rageRunning = false
+        document.body.style.animation = "none"
     }  
 })
