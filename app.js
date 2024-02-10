@@ -32,6 +32,7 @@ document.getElementById("hit-button").addEventListener("click", function(){
     
 
     currentHealth = currentHealth > hitValue ? currentHealth - hitValue : 0
+    checkEffects()
     updateScreen()
 })
 
@@ -44,6 +45,7 @@ document.getElementById("dot-button").addEventListener("click", function(){
         
         interval = setInterval(function() {
                 currentHealth = currentHealth > hitValue ? currentHealth - hitValue : 0
+                checkEffects()
                 updateScreen()
         }, dotInterval)
 
@@ -63,11 +65,22 @@ document.getElementById("rage-button").addEventListener("click", function(){
 
         document.getElementById("rage-button").value = "Stop Rage"
         document.body.style.animation = "argh-my-eyes 0.2s infinite"
+        document.getElementById("effectText").innerHTML = "<p>RAGE!!!!</p>"
         rageRunning = true
     } else { // rage running === false
         
         document.getElementById("rage-button").value = "Rage"
         rageRunning = false
         document.body.style.animation = "none"
+        document.getElementById("effectText").innerHTML = "<p></p>"
     }  
 })
+
+function checkEffects() {
+    if (currentHealth/maxHealth < 0.5) {
+        document.body.style.animation = "argh-my-eyes 0.2s infinite"
+        document.getElementById("rage-button").value = "Stop Rage"
+        document.getElementById("effectText").innerHTML = "<p>U RAGE!!! MEEEE!</p>"
+        rageRunning = true
+    }
+}
