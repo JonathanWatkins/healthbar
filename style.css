@@ -22,8 +22,6 @@
     width:100%;
     height:100%;
     background: red;
-    position: relative;
-    display: flex;
     /* justify-content: space-around; */
 }
 
@@ -37,12 +35,6 @@
     transition: width 0s;
     color: white;
     /* justify-self: left; */
-}
-
-#health-text {
-    position:absolute;
-    top: 0px;
-    color: white;
 }
 
 #effectText {
