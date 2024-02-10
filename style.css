@@ -65,3 +65,14 @@
   }
 }
 */
+
+@keyframes argh-my-eyes {
+    0%   { background-color: red; }
+<!--     49% { background-color: black; } -->
+    50% { background-color: black; }
+    100% { background-color: black; }
+<!--     99% { background-color: #000; } -->
+<!--     100% { background-color: red; } -->
+    
+  }
+  
