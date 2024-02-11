@@ -32,7 +32,7 @@ document.getElementById("hit-button").addEventListener("click", function(){
     
 
     currentHealth = currentHealth > hitValue ? currentHealth - hitValue : 0
-    checkEffects()
+    // checkEffects()
     updateScreen()
 })
 
@@ -45,7 +45,7 @@ document.getElementById("dot-button").addEventListener("click", function(){
         
         interval = setInterval(function() {
                 currentHealth = currentHealth > hitValue ? currentHealth - hitValue : 0
-                checkEffects()
+                // checkEffects()
                 updateScreen()
         }, dotInterval)
 
