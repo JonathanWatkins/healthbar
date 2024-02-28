@@ -5,11 +5,11 @@ let interval
 let dotRunning = false
 let rageRunning = false
 
-document.getElementById("health-text").innerHTML = currentHealth + "/" + maxHealth
+document.getElementById("health-text").innerHTML = currentHealth.toLocaleString() + "/" + maxHealth.toLocaleString()
 document.getElementById("bar-health").style.width = currentHealth/maxHealth*100 + "%"
 
 function updateScreen() {
-    document.getElementById("health-text").innerHTML = currentHealth + "/" + maxHealth
+    document.getElementById("health-text").innerHTML = currentHealth.toLocaleString() + "/" + maxHealth.toLocaleString()
     document.getElementById("bar-health").style.width = currentHealth/maxHealth*100 + "%"
 
 }
