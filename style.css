@@ -1,31 +1,44 @@
-.centered-container, .bar-container {
+body {
+  font-family:sans-serif;
+}
+
+.centered-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position:relative;
+    gap: 10px;
 }
 
-.bar-container {
+#bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
    height: 30px;
    width: 400px;
 }
 
-.bar-frame {
+#bar-frame {
     width:100%;
     height:100%;
 /*     background: black; */
     /* display: flex; */
 }
 
-
-.bar-background {
+#bar-background {
     width:100%;
     height:100%;
+    z-index: 0;
     background: #00800082;
+    position:absolute;
     /* justify-content: space-around; */
 }
 
-.bar-health {
+#bar-health {
+    position:absolute;
     width:100%;
     height:100%;
     background: green;
@@ -34,12 +47,47 @@
     justify-content: center;
     transition: width 0s;
     color: white;
+    z-index:10;
+    /* justify-self: left; */
+}
+
+#bar-armour {
+    position: absolute;
+    width:75%;
+    height:100%;
+    background: #01c7c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0s;
+    color: white;
+    z-index: 30;
     /* justify-self: left; */
 }
 
 #effectText {
   color:white;
 }
+
+#bar-text-container {
+  position:absolute;
+  color: black;
+  z-index:30;
+  display:flex;
+  align-items: center;
+  height:100%;
+  width:100%;
+  justify-content:flex-end;
+  font-family: sans-serif;
+  font-weight: 900;
+  right:5px;
+  gap:10px;
+}
+
+#bar-text-health, #bar-text-armour {
+  
+}
+
 
 /*
 .lds-dual-ring {
