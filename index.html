@@ -9,17 +9,24 @@
 </head>
 <body>
 <div class="centered-container">
-    <div class="bar-container">
-        <div class="bar-frame">
-            <div class="bar-background">
-                <div class="bar-health" id="bar-health"></div>
-                <span id="health-text">50/100</span>
+    <div id="bar-container">
+        <div id="bar-frame">
+            <div id="bar-background"></div>
+            <div id="bar-health"></div>
+            <div id="bar-armour"></div>
+            <div id="bar-text-container">
+                <div id="bar-text-health">50/100</div>
+                <div id="bar-text-armour">50/100</div>
             </div>
         </div>
     </div>
-    <div id="effectText"><p></p></div>
+    <div id="effectText"></div>
+    <div>Max Health</div>
     <input type="text" name="maxhealth" id="maxhealth" value="50">
-    <input type="text" name="hit-value" id="hit-value" value="10">
+    <div>Max Armour</div>
+    <input type="text" name="maxarmour" id="maxarmour" value="50">
+    <div>Damage</div>
+    <input type="text" name="hit-value" id="hit-value" value="10">    
     <input type="text" name="dot-interval" id="dot-interval" value="1000">
     <input type="button" name="hit-button" id="hit-button" value="Hit!">
     <input type="button" name="dot-button" id="dot-button" value="Dot">
