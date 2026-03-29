@@ -2,6 +2,18 @@ body {
   font-family:sans-serif;
 }
 
+#button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  grid-gap: 10px;
+}
+
+display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        grid-gap: 10px;
+
 .centered-container {
     display: flex;
     flex-direction: column;
