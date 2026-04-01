@@ -2,6 +2,41 @@ body {
   font-family:sans-serif;
 }
 
+.towerRow input[type="text"],
+.towerRow input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#towers-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 200;
+}
+
+.towers {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background: white;
+    z-index: 100;
+}
+
+.towerRow {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 2fr;
+    grid-gap: 10px;
+}
+
+.tower-list {
+    display: flex;
+    flex-direction: column;
+
+}
+
 #button-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -131,3 +166,16 @@ body {
   }
   
 
+
+.float-text {
+    position: fixed;
+    pointer-events: none;
+    font-weight: bold;
+    animation: floatUp 2.0s ease-out forwards;
+    z-index: 50;
+}
+
+@keyframes floatUp {
+    0%   { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-80px); }
+}
